@@ -44,15 +44,15 @@ class _CustomCalendarWidgetState extends State<CustomCalendarWidget> {
     final date = DateTime.now();
 
     if(widget.selectedDateTimeStart!=null){
-      _selectedDateTimeStart = widget.selectedDateTimeStart;
-      _currentDateTime = widget.selectedDateTimeStart;
+      _selectedDateTimeStart = DateTime(widget.selectedDateTimeStart.year, widget.selectedDateTimeStart.month, widget.selectedDateTimeStart.day);
+      _currentDateTime = DateTime(widget.selectedDateTimeStart.year, widget.selectedDateTimeStart.month, widget.selectedDateTimeStart.day);
     }else{
       _selectedDateTimeStart = DateTime(date.year, date.month, date.day);
       _currentDateTime = DateTime(date.year, date.month);
     }
 
     if(widget.selectedDateTimeEnd != null){
-      _selectedDateTimeEnd = widget.selectedDateTimeEnd;
+      _selectedDateTimeEnd = DateTime(widget.selectedDateTimeEnd.year, widget.selectedDateTimeEnd.month, widget.selectedDateTimeEnd.day);
     }else{
       _selectedDateTimeEnd = DateTime(date.year, date.month, date.day);
     }

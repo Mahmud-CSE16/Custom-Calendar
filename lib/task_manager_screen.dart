@@ -17,8 +17,8 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              child: CustomCalendarWidget(
 
+              child: CustomCalendarWidget(
                 titleWidget: Row(
                   children: [
                     Icon(Icons.psychology_outlined,size: 40,),
@@ -33,8 +33,7 @@ class _TaskManagerScreenState extends State<TaskManagerScreen> {
                   ],
                 ),
 
-                //here should pass exact date without time like bellow
-                selectedDateTimeStart: DateTime(DateTime.now().year,DateTime.now().month,DateTime.now().day),
+                selectedDateTimeStart: DateTime.now(),
                 selectedDateTimeEnd: DateTime(DateTime.now().year,DateTime.now().month,DateTime.now().day+5),
 
                 onChangeDate: (startAt,endAt){
